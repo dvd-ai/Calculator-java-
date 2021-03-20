@@ -71,10 +71,6 @@ public class calculation implements i_calculator.calculation {
     //подметод Roman2Int
     public int decodeSingle(char letter) {
         return switch (letter) {
-            case 'M' -> 1000;
-            case 'D' -> 500;
-            case 'C' -> 100;
-            case 'L' -> 50;
             case 'X' -> 10;
             case 'V' -> 5;
             case 'I' -> 1;
@@ -91,7 +87,7 @@ public class calculation implements i_calculator.calculation {
 
         while (index<ArabicSymbols_len)
         {
-            BitDepth = aNumber/ArabicSymbols[index];
+            BitDepth = aNumber / ArabicSymbols[index];
 
             for (int i = 0; i < BitDepth; i++) {
                 numeric += RomanSymbols[index];
@@ -126,7 +122,5 @@ public class calculation implements i_calculator.calculation {
         if (!m_num_is_Roman)
             System.out.println(result);
 
-        else System.out.println(Int2Roman(result)); //8495 - расстояние между арабскими числами
-                                                        // и римскими в utf-16
-    }
+        else System.out.println(Int2Roman(result));     }
 }
